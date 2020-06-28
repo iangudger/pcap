@@ -90,7 +90,7 @@ func MakeHeader(maxLen uint32) (Header, error) {
 const PacketHeaderLen = 16
 
 // A PacketHeader is the per-packet header in a pcap file.
-type  struct {
+type PacketHeader struct {
 	// Seconds is the timestamp seconds.
 	Seconds uint32
 
@@ -98,7 +98,7 @@ type  struct {
 	Microseconds uint32
 
 	// IncludedLength is the number of octets of packet saved in file.
-	 uint32
+	IncludedLength uint32
 
 	// OriginalLength is the actual length of packet.
 	OriginalLength uint32
